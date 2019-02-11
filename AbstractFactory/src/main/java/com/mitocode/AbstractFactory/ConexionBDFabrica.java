@@ -1,9 +1,11 @@
 /**
  * 
  */
-package com.mitocode.Factory;
+package com.mitocode.AbstractFactory;
 
 import com.mitocode.inter.IConexionBD;
+import com.mitocode.inter.IConexionREST;
+import com.mitocode.inter.IFabricaAbstracta;
 import com.mitocode.inter.impl.ConexionMySQL;
 import com.mitocode.inter.impl.ConexionOracle;
 import com.mitocode.inter.impl.ConexionPostgreSQL;
@@ -14,9 +16,10 @@ import com.mitocode.inter.impl.ConexionVacia;
  * @author BRYAN
  *
  */
-public class ConexionFabrica {
+public class ConexionBDFabrica implements IFabricaAbstracta{
 	
-	public IConexionBD getConexion(String motor) {
+	@Override
+	public IConexionBD getBD(String motor) {
 		if (motor == null) {
 			return new ConexionVacia();
 		}
@@ -30,5 +33,10 @@ public class ConexionFabrica {
 			return new ConexionSQLServer();
 		}
 		return new ConexionVacia();
+	}
+	
+	@Override
+	public IConexionREST getREST(String motor) {
+		return null;
 	}
 }

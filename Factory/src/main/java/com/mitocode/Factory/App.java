@@ -1,6 +1,6 @@
 package com.mitocode.Factory;
 
-import com.mitocode.inter.IConexion;
+import com.mitocode.inter.IConexionBD;
 
 /**
  * Hello world!
@@ -10,16 +10,19 @@ public class App
 {
     public static void main( String[] args )
     {
+    	//Patrón Fabrica: Se basa en el envio de un valor a una clase fabrica 
+    	//para que te devuelva una instancia de un objeto en base a este valor, sin mostrar su lógica.
+    	
         ConexionFabrica fabrica = new ConexionFabrica();
-        IConexion cx1 = fabrica.getConexion("ORACLE");
+        IConexionBD cx1 = fabrica.getConexion("ORACLE");
         cx1.conectar();
         cx1.desconectar();
         
-        IConexion cx2 = fabrica.getConexion("MYSQL");
+        IConexionBD cx2 = fabrica.getConexion("MYSQL");
         cx2.conectar();
         cx2.desconectar();
         
-        IConexion cx3 = fabrica.getConexion("H2");
+        IConexionBD cx3 = fabrica.getConexion("H2");
         cx3.conectar();
         cx3.desconectar();
     }

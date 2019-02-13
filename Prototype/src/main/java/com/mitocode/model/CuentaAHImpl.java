@@ -24,7 +24,7 @@ public class CuentaAHImpl implements ICuenta {
 		CuentaAHImpl cuenta = null;
 		try {
 			cuenta = (CuentaAHImpl) clone();
-		} catch (Exception e) {
+		} catch (CloneNotSupportedException e) {
 			e.printStackTrace();
 		}
 		return cuenta;

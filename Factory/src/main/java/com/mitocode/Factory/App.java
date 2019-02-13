@@ -10,6 +10,7 @@ public class App
 {
     public static void main( String[] args )
     {
+    	//Tipo Patron: CREACION
     	//Patrón Fabrica: Se basa en el envio de un valor a una clase fabrica 
     	//para que te devuelva una instancia de un objeto en base a este valor, sin mostrar su lógica.
     	

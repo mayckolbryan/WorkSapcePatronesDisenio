@@ -10,6 +10,7 @@ public class App
 {
     public static void main( String[] args )
     {
+    	//Tipo Patron: CREACION
     	//Patron Singleton: Se basa en la reutilización de la instacia de los objetos 
     	//para disminuir la carga evitando generar mas espacios de memoria.
     	

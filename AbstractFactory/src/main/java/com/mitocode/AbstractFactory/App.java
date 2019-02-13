@@ -12,6 +12,7 @@ public class App
 {
     public static void main( String[] args )
     {
+    	//Tipo Patron: CREACION
     	//Patrón Fabrica Abstracta: Se basa en una clase fabrica de fabricas de objetos.
         IFabricaAbstracta fabricaBD = FabricaProductor.getFactory("BD");
         IConexionBD cxBD1 = fabricaBD.getBD("MYSQL");
